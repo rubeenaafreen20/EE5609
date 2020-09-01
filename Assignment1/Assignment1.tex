@@ -1,0 +1,171 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{Rubeena Aafreen }
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609/tree/master/Codes
+\end{lstlisting}
+%
+and latex codes from 
+%
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609
+\end{lstlisting}
+%
+\section{Problem}
+
+A ray of light passing through the point \begin{pmatrix} 1 \\ 2 \end{pmatrix}
+reflects on the x-axis at point \textbf{A} and the reflected ray passes through the point \begin{pmatrix} 5 \\ 3 \end{pmatrix}. Find
+the coordinates of \textbf{A}.
+
+\section{Explanation}
+Since, point \textbf{A} is on x-axis, ts y-coordinate is zero. Let point A be \begin{pmatrix} k \\ 0 \end{pmatrix}
+\\
+Let MA be the normal to the x-axis. In case of reflection, angle of incidence = angle of reflection\\ 
+\\
+Let $\angle$QAX=$\theta$\\
+\implies$\angle$PAX=180\degree-$\theta$
+\\
+Slope of line QA = tan $\theta$
+\\
+Slope of line PA = tan (180\degree-$\theta$)=-tan $\theta$
+\\
+which means,\\
+Slope of line PA=-(Slope of line QA
+\implies \dfrac{-2}{k-1}=\dfrac{-3}{k-5}
+
+\section{Solution}
+\\
+Solving the equation:\\
+\dfrac{-2}{k-1}=\dfrac{-3}{k-5}\\\\ \text{we get,}\\
+\\ 
+k=\dfrac{13}{5}\\\end{document}
