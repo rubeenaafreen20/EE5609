@@ -182,25 +182,15 @@ Normal vector
 From Fig. 0, \\
 Projection of \Vec{d} in the direction of \Vec{n} is given by\\
 \begin{align}
-\Vec{d_{1}}=(\Vec{d}^{T}{\hat{\Vec{n}}})\hat{\Vec{n}}
+\Vec{d_{1}}=(\Vec{d}^{T}\Vec{n}) \Vec{n}
 \end{align}
 Projection of \Vec{d} in the orthogonal direction is given by\\
 \begin{align}
-\Vec{d_{2}}=\vec{d}-(\Vec{d}^{T}{\hat{\Vec{n}}})\hat{\Vec{n}}
-\end{align}
-
-Projection of \textbf{b}= -(Projection of \textbf{d}) \\
-\begin{align}
-\Vec{b}=-(\Vec{d}^{T}{\hat{\Vec{n}}})\hat{\Vec{n}}+(\vec{d}-(\Vec{d}^{T}{\hat{\Vec{n}}})\hat{\Vec{n}})
+\Vec{d_{2}}=\vec{d}-(\Vec{d}^{T}{\Vec{n}}) \Vec{n}
 \\
-\implies \vec{b}=\vec{d}-2(\vec{d}^{T}\hat{\vec{n}})\hat{\vec{n}}\\
-\implies \vec{b}=\vec{d}-2\dfrac{\vec{d}^{T}{\vec{n}}}{\norm{\vec{n}}^2}\vec{n}\\
-\norm{\vec{n}^2}=1
-\end{align}
-
-Hence,equation for reflected vector can be written as:
-\begin{align}
-    \vec{b}=\vec{d}-2(\vec{d}^{T}\vec{n})\vec{n}
+\Vec{d}+\vec{b}=2\Vec{d_{2}} \\
+\implies \Vec{d}+\vec{b}=2\vec{d}-2(\Vec{d}^{T}{\Vec{n}}) \Vec{n}\\
+\implies \vec{b}=\vec{d}-2(\vec{d}^{T}\vec{n})\vec{n}
 \end{align}
 
 \section{Solution}
