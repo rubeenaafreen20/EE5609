@@ -149,9 +149,9 @@ a)The tangents are parallel to the x-axis, hence, their direction and normal vec
 \end{align}
 For an ellipse, given the normal vector $\vec{n}$, the tangent points of contact to the ellipse are given by
 \begin{align}
-    \vec{q}=(\kappa \vec{n}-\vec{u})
+    \vec{q}=\vec{V}^{-1}(\kappa \vec{n}-\vec{u})
     \label{eq:2}
-    =\kappa \vec{n}
+    =\vec{V}^{-1}\kappa \vec{n}
 \end{align}
 where
 \begin{align}
@@ -165,10 +165,12 @@ where
 \end{align}
 From \eqref{eq:2} , the point of contact $\vec{q_i}$ are,
 \begin{align}
-    \vec{q_1}=\frac{1}{4}\myvec{0\\1}\\
-    =\myvec{0\\\frac{1}{4}}\\
-    \vec{q_2}=-\frac{1}{4}\myvec{0\\1}\\
-    =\myvec{0\\-\frac{1}{4}}
+    \vec{q_1}=\myvec{9 & 0 \\ 0 & 16}\frac{1}{4}\myvec{0\\1}\\
+    =\myvec{9 & 0 \\ 0 & 16}\myvec{0\\\frac{1}{4}}\\
+    =\myvec{0\\4}\\
+    \vec{q_2}=\myvec{9 & 0 \\ 0 & 16}\left(-\frac{1}{4}\right)\ \myvec{0\\1}\\
+    =\myvec{9 & 0 \\ 0 & 16}\myvec{0\\-\frac{1}{4}}\\
+    =\myvec{0\\-4}
 \end{align}
 b) The tangents are parallel to the y-axis, hence, their direction and normal vectors, $\vec{m_2}$ and $\vec{n_2}$ are respectively,
 \begin{align}
@@ -183,9 +185,18 @@ Using equation \eqref{eq:2.0.9}, the values of $\kappa$ for this case are
 \end{align}
 and from \eqref{eq:2} , the point of contact $\vec{q_i}$ are,
 \begin{align}
-    \vec{q_3}=\frac{1}{3}\myvec{1\\0}\\
-    =\myvec{\frac{1}{3}\\0}\\
-    \vec{q_4}=-\frac{1}{3}\myvec{1\\0}\\
-    =\myvec{-\frac{1}{3}\\0}
+\vec{q_3}=\myvec{9 & 0 \\ 0 & 16}\frac{1}{3}\myvec{1\\0}\\
+    =\myvec{9 & 0 \\ 0 & 16}\myvec{\frac{1}{3}\\0}\\
+    =\myvec{3\\0}\\
+\vec{q_4}=\myvec{9 & 0 \\ 0 & 16}\left(-\frac{1}{3}\right)\ \myvec{1\\0}\\
+    =\myvec{9 & 0 \\ 0 & 16}\myvec{-\frac{1}{3}\\0}\\
+    =\myvec{-3\\0}
 \end{align}
+ \begin{figure}[h!]
+ \renewcommand \thefigure{1}
+	\centering
+	\includegraphics[width=\columnwidth]{ellipse.png}
+	\caption{Figure depicting point of contact of tangents of ellipse parallel to x-axis and y-axis}
+	\label{fig1}
+\end{figure}
  \end{document}
