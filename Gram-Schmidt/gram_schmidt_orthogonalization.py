@@ -1,21 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[134]:
+# In[136]:
 
 
 import numpy as np 
 def compute_gram_schmidt(A):                          # Number of columns
-    # m=len(A)
+    B=A
     n=len(A[0])
     for j in range(n):
         for k in range(j):
-            A[:, j] -= np.dot(A[:, k],A[:,j])*(A[:, k])  #Orthogonalization
-        A[:,j]=A[:,j]/np.linalg.norm(A[:,j])    #Orthonormalization
-    return A
+            B[:, j] -= np.dot(B[:, k],B[:,j])*(B[:, k])  #Orthogonalization
+        B[:,j]=B[:,j]/np.linalg.norm(B[:,j])    #Orthonormalization
+    return (B)
 
 
-# In[135]:
+# In[137]:
 
 
 test_matrices = np.load('testmatrices.npy',allow_pickle=True)
