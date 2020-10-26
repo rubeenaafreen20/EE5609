@@ -140,15 +140,15 @@ https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment8
 %
 %
 \section{Problem}
-Let s$<$n and A an $sxn$ matrix with entries in the field $\mathbb{F}$. Use Theorem 4 to show that there is a non-zero $\vec{x}$ in $\mathbb{F}^{nx1}$ such that $\vec{A}\vec{x}=0$. 
+Let $s \textless n$ and A an $s\times n$ matrix with entries in the field $\mathbb{F}$. Use Theorem 4 to show that there is a non-zero $\vec{x}$ in $\mathbb{F}^{n\times 1}$ such that $\vec{A}\vec{x}=0$. 
 \section{Explanation}
 \textbf{Theorem 4:}\textit{Let $\mathbb{V}$ be a vector space which is spanned by a finite set of vectors $\beta_1,\beta_2,...,\beta_m$. Then any independent set of vectors in $\mathbb{V}$ is finite and contains no more than m elements.}
 \section{Solution}
 Let,$\alpha_1,\alpha_2,\alpha_3,\dots,\alpha_n$ be columns of matrix A.\\
-$\because$ A is $sxn$ matrix
+$\because$ A is $s\times n$ matrix
 \begin{align}
-\implies \alpha_i\in\mathbb{F}^{sx1}\\
-\textit{Given }\vec{x}\in\mathbb{F}^{nx1}\\
+\implies \alpha_i\in\mathbb{F}^{s\times 1}\\
+\textit{Given }\vec{x}\in\mathbb{F}^{n\times 1}\\
 \implies\vec{x}=\myvec{x_1\\x_2\\x_3\\\vdots\\x_n}
 \end{align}
 Assume $(\alpha_1,\alpha_2,\dots,\alpha_s)$ form a basis for column space of A, i.e space spanned by $(\alpha_1,\alpha_2,\dots,\alpha_n)$.\newline
@@ -161,6 +161,6 @@ Therefore,
 \end{align}
 Therefore, nullspace N(A) is non-trivial  as
 \begin{align}
-    \exists  x_1,x_2,\dots,x_n \in \mathbb{F}^{nx1}
+    \exists  x_1,x_2,\dots,x_n \in \mathbb{F}^{n\times1}
 \end{align} such that $\vec{A}\vec{x}=0$
 \end{document}
