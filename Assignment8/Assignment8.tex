@@ -137,27 +137,50 @@ https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment8
 %
 %
 \section{Problem}
-Let \textit{s\textless n} and A an $s\times n$ matrix with entries in the field $\mathbb{F}$. Use Theorem 4 to show that there is a non-zero $\vec{x}$ in $\mathbb{F}^{n\times 1}$ such that $\vec{A}\vec{x}=\vec{0}$. 
+Let \textit{s\textless n} and A an $s\times n$ matrix with entries in the field $\mathbb{F}$. Use Theorem 4 to show that there is a non-zero $\vec{x}$ in $\mathbb{F}^{n\times 1}$ such that $Ax=\vec{0}$. 
 \section{Explanation}
 \textbf{Theorem 4:}\textit{Let $\mathbb{V}$ be a vector space which is spanned by a finite set of vectors $\beta_1,\beta_2,...,\beta_m$. Then any independent set of vectors in $\mathbb{V}$ is finite and contains no more than m elements.}
 \section{Solution}
-Let $\vec{A_1},\vec{A_2},\vec{A_3},\dots,\vec{A_n}$ be s-tuples in vector space $\mathbb{V}$.
+
+Let \mathbb{V} be a vector space spanned by $A_1,A_2,\dots,A_n$, where $A_i$, i=1,2,\dots,n are columns of matrix $A_{s\times n}$. let $\vec{x}$ be a vector in vector space $\mathbb{V}$\newline
+Let
+    \begin{multiline}
+    \begin{align}
+    S=\{x:Ax=\vec{0}\}\\
+    \text{If } x_1,x_2 \in S\\
+    \implies A(x_1+x_2)=Ax_1+Ax_2=0\\
+    \implies (x_1+x_2)\in S \label{eq1subspace}\\
+    \text{If } x \in S\\
+    \implies A(\alpha x)=\alpha(Ax)=0\\
+    \implies \alpha x\in S \label{eq2subspace}
+    \end{align}
+    \end{multiline}
+From equations \eqref{eq1subspace} and \eqref{eq2subspace}, $S$ is a subspace of $\mathbb{V}$.\newline
+From equation \eqref{eq1subspace}, it is clear that,
 \begin{align}
-    \vec{A}=\myvec{\vec{A_1}&\vec{A_2}&\dots&\vec{A_n}}\\
-    \vec{A_i}=\myvec{\alpha_{1i}\\\alpha_{2i}\\\vdots\\\alpha_{si}}, i=1,2,\dots,n\\
-    \vec{A}=\myvec{\alpha_{11} & \alpha_{12} & \dots&\alpha_{1n} \\ \alpha_{21} & \alpha_{22} & \dots&\alpha_{2n}\\\vdots &\vdots& &\vdots\\\alpha_{s1} & \alpha_{s2} & \dots&\alpha_{sn}} \label{eqmatrixA}
+    \vec{x}=\myvec{x_1\\x_2\\\vdots\\x_n}
 \end{align}
-Let,
+ is in $S$ iff,
+ \begin{align}
+    \sum_{i=1}^{n}A_ix_i = \vec{0}
+ \end{align}
+ Where $A_i$ is the $i^{th}$ column of matrix A.\newline
+ Let $A_1,A_2,\dots,A_s$ form a basis for column space of $A$, then,
+ \begin{align}
+    &Ax=\vec{0}\\
+    \implies &A_1x_1+\dots+A_sx_s+A_{s+1}x_{s+1}+\dots+A_nx_n=\vec{0}\label{eqhomogeneous}
+ \end{align}
+The columns not in the basis can be expressed as linear combinations of the basis columns
 \begin{align}
-\vec{x}=\myvec{x_1\\x_2\\\vdots\\x_n}&\\
-\vec{A}\vec{x}=\vec{0_{s\times1}}&\\
-\implies \myvec{\vec{A_1}&\vec{A_2}&\dots&\vec{A_n}}\myvec{x_1\\x_2\\\vdots\\x_n}=\vec{0}&\\
-\implies \vec{A_1}x_1+\vec{A_2}x_2+\dots+\vec{A_n}x_n=\vec{0} \label{eqhomogeneous}\\
-\implies \myvec{\vec{A_1}&\vec{A_2}&\dots&\vec{A_n}}\vec{x}=\vec{0}
+    A_{s+1}=\sum_{j=1}^{s}\beta_{1,j}x_i\\
+    A_{s+2}=\sum_{j=1}^{s}\beta_{2,j}x_i\\
+    \vdots\\
+    A_{n}=\sum_{j=1}^{s}\beta_{(n-s),j}x_i
 \end{align}
-$\because$ It is given that n$>$s,\newline Equation \eqref{eqhomogeneous} leads to a homogeneous system of linear equations with \textit{s equations and n unknowns}.\\
+Therefore, we can conclude that the columns of matrix A are not independent.\newline
+Equation \eqref{eqhomogeneous} leads to a homogeneous system of linear equations with \textit{s equations and n unknowns}.\\
 Since, $s$ rows can hold at most $s$ pivots, there must be $(n-s)$ free variables.\newline
 These free variables can be assigned any value. Hence, there are more solutions to equation \eqref{eqhomogeneous} than the trivial $x=0$.\newline
 $\implies$ Equation \eqref{eqhomogeneous} will have at least one special solution. \newline
-Therefore, at least one $x_j\neq0, j=1,2,\dots,n$\ esixts such that $\vec{A}\vec{x}=0$.
+Therefore, at least one $x_j\neq0, j=1,2,\dots,n$\ exists such that $Ax=\vec{0}$.
 \end{document}
