@@ -1,0 +1,230 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{refstyle}
+\usepackage{caption}
+\usepackage{steinmetz}
+\usepackage{tikz}
+%\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+   \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+%\usepackage{multicol}
+\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+%\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+%\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 9}
+\author{Rubeena Aafreen}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{abstract}
+This assignment deals with linear transformation.
+\end{abstract}
+Download  all solutions from 
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment9
+\end{lstlisting}
+\section{Problem}
+Let V be a vector space over the field of complex numbers , and suppose there is an isomorphism T of V onto $C^{3}$. Let $\alpha_1$ , $\alpha_2$ , $\alpha_3$  , $\alpha_4$ be vectors in V such that 
+   \begin{multline}
+    \begin{aligned}
+    T\brak{\alpha_1}=\myvec{1\\0\\i} , T\brak{\alpha_2}=\myvec{-2\\1+i\\0} ,\\ T\brak{\alpha_3}=\myvec{-1\\1\\1} , T\brak{\alpha_4}=\myvec{\sqrt{2}\\i\\3}
+    \end{aligned}
+    \end{multline}
+    Let $W_1$ be the subspace spanned by $\alpha_1$ and $\alpha_2$, and let $W_2$ be the subspace spanned by $\alpha_3$ and $\alpha_4$. What is the intersection of $W_1$ and $W_2$.
+\section{Theory}
+\subsection{Properties of Isomorphism}
+T : V $\rightarrow$ W is an isomorphism if
+ 
+ (1) T is one one.
+ 
+ (2) T is onto.
+ \subsection{Theorem 6} 
+If $W_1$ and $W_2$ are finite-dimensional subspaces of a vector space V, then $W_1+W_2$ is finite-dimensional and
+\begin{align}
+    dim (W_1)+ dim(W_2) = dim(W_1 {\displaystyle \cap } W_2) + dim (W_1 + W_2)\eqlabel{eqdim}
+\end{align}
+\section{Solution}
+We have,
+\begin{align}
+T=\myvec{1&-2&-1&\sqrt{2}\\0&1+i&1&i\\i&0&1&3}&\\
+\myvec{1&-2&-1&\sqrt{2}\\0&1+i&1&i\\i&0&1&3}\xrightarrow[]{rref}\myvec{1&0&-i&0\\0&1&\frac{1-i}{2}&0\\0&0&0&1}\eqlabel{rref}
+\end{align}
+T is one one over $C^{3}$ if 
+\begin{align}
+    T\brak{\alpha}=0 \implies \alpha =0
+\end{align}
+now,
+\begin{align}
+ \myvec{1&-2&\sqrt{2}\\0&1+i&i\\i&0&3}\alpha = 0
+\end{align}
+consider the row reduced matrix
+\begin{align}
+    \myvec{1&-2&\sqrt{2}\\0&1+i&i\\i&0&3}
+    \xleftrightarrow[R_3\rightarrow i R_3]{R_3\rightarrow R_3-iR_1}\myvec{1&-2&\sqrt{2}\\0&1+i&i\\0&-2&\sqrt{2}+3i}\\
+    \xleftrightarrow[R_3\leftarrow R_3+R_2]{R_2\leftarrow (1-i)R_2}\myvec{1&-2&\sqrt{2}\\0&2&i+1\\0&0&\sqrt{2}+4i+1}
+\end{align}
+\begin{align}
+    \vec{\alpha} = \myvec{0\\0\\0}
+\end{align}
+Therefore it holds the condition of one one and the rank = no. of pivot columns = 3 (equal to no. of columns).Thus the  vectors are linearly independent hence it is onto . Hence, T is an isomorphism onto $C^{3}$. \newline
+Also, from \eqref{rref}, we observe,
+\begin{align}
+   T\brak{\alpha_3}=-i T\brak{\alpha_1}+\frac{i-1}{2}T\brak{\alpha_2} 
+\end{align}
+ Hence $T\brak{\alpha_3}$ belongs to the subspace spanned by $T\brak{\alpha_1}$ and $T\brak{\alpha_2}$.\newline
+ Therefore, $\alpha_3$ is in subspace spanned by  $\alpha_1$ and $\alpha_2$. Therefore,
+ \begin{align}
+     \alpha_3 \in W_1\\
+     \implies \alpha_3 \in W_1 {\displaystyle \cap } W_2\eqlabel{eq2}
+ \end{align}
+  Since $T\brak{\alpha_1}$ and $T\brak{\alpha_2}$ are linearly independent, and $T\brak{\alpha_3}$ and $T\brak{\alpha_4}$ are linearly independent, we have,
+  \begin{align}
+      dim(W_1) = dim(W_2) = 2
+  \end{align}
+  From \eqref{eqdim},
+  \begin{align}
+      dim(W_1)+dim(W_2)=dim(W_1 {\displaystyle \cap } W_2)+dim(W_1+W_2)&\\
+      dim(W_1+W_2)=3&\\
+      \implies dim(W_1 {\displaystyle \cap } W_2)=2+2-3&\\
+      \implies dim(W_1 {\displaystyle \cap } W_2)=1&
+  \end{align}
+  Therefore,
+  \begin{align}
+      W_1 {\displaystyle \cap } W_2=c\alpha_3
+  \end{align}
+\end{document}
