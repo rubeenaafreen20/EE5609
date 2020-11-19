@@ -162,23 +162,23 @@ https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment11
 Let $\vec{V}$ be the vector space of $n \times n$ matrices over the field $\mathbb{F}$. If $\Vec{B}$ is a fixed $n \times n$ matrix, define a function $f_B$ on $\vec{V}$ by $f_B(\Vec{A})=\textit{Tr}(\Vec{B}^T\vec{A})$. Show that every linear functional on $\vec{V}$ is of the form $f_B$
 for some $\vec{B}$.
 \section{Solution}
- For $\vec{A}=(a_{ij})\in \Vec{V}$, a linear functional $f:\vec{V}\longrightarrow\mathbb{F}$ is defined as:
+ For $\vec{A}=(a_{ij})\in \Vec{V}$, a linear functional $f_B:\vec{V}\longrightarrow\mathbb{F}$ is defined as:
 \begin{align}
-    f\brak{\vec{A}}=\vec{A}^T\vec{c}\eqlabel{eqDefn}
+    f_B\brak{\vec{A}}=\vec{A}^T\vec{c}\eqlabel{eqDefn}
 \end{align}
 \eqref{eqDefn} can be written as,
 \begin{align}
-    f\brak{\vec{A}}=\sum_{i=1}^{n}\sum_{j=1}^{n}c_{ij}a_{ij}\eqlabel{eq1}
+    f_B\brak{\vec{A}}=\sum_{i=1}^{n}\sum_{j=1}^{n}c_{ij}a_{ij}\eqlabel{eq1}
 \end{align}
-Now let $\vec{B}=(b_{ij})\in\Vec{V}$ be any $n\times n$ matrix. Then
+Now,
 \begin{align}
     Tr(\vec{B}^t\vec{A})=&\sum_{i=1}^{n}(\vec{B}^t\Vec{A})_{ii}\\
-    &=\sum_{i=1}^{n}\sum_{k=1}^{n}(b_{ik})^Ta_{ki}\\
-    &=\sum_{i=1}^{n}\sum_{k=1}^{n}b_{ki}a_{ki}\eqlabel{eqtrace}
+    &=\sum_{j=1}^{n}\sum_{i=1}^{n}(b_{ji})^Ta_{ij}\\
+    &=\sum_{j=1}^{n}\sum_{j=1}^{n}b_{ij}a_{ij}\eqlabel{eqtrace}
 \end{align}
-From \eqref{eq1} and \eqref{eqtrace}, we get an appropriate matrix $\vec{B}$ such that $Tr(\vec{B}^T\vec{A})=f$ if
+Let $c_{ij}=b_{ij}$, from \eqref{eq1} and \eqref{eqtrace},
 \begin{align}
-    c_{ki}=b_{ki}
+    Tr(\vec{B}^T\vec{A})=f_B
 \end{align}
 Hence, Proved.
 \end{document}
