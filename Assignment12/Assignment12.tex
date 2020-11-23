@@ -1,0 +1,211 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 12}
+\author{Rubeena Aafreen}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment12
+\end{lstlisting}
+\section{\textbf{Problem}}
+(UGC-june2017,74) : \\
+%
+For any $n\times n$ matrix $B$, let $N(B)=\{X\in \mathbb{R}^n:BX=0\}$ be the null space of $B$. Let $A$ be a $4\times 4$ matrix with $dim(N(A-4I))=2, dim(N(A-2I))=1$ and $rank(A)=3$
+Which of the following are true?\\
+\begin{enumerate}
+\item 0,2 and 4 are eigenvalues of A
+\item determinant(A)=0
+\item A is not diagonalizable
+\item trace(A)=8
+\end{enumerate}
+\section{\textbf{Solution}}
+\begin{longtable}{|l|l|}
+    \hline
+	\multirow{3}{*}{Given} 
+	& \\
+	& $A$ is a $4\times 4$ matrix.
+	\\
+	& $dim\brak{N\brak{A-4I}}=2,\\
+	& $dim\brak{N\brak{A-2I}}=1$, and\\
+	& $rank\brak{A}=3$&&
+	\hline
+	\multirow{3}{*}{Eigenvalues of a matrix} 
+	& \\
+	& The number $\lambda$ is an eigenvalue of a matrix A if and only if $A-\lambda I$ is singular,\\& i.e. $\mydet{A-\lambda I}=0$\\&&
+	& For $\lambda=2$\\
+	& Given that $dim\brak{N\brak{A-2I}}=1$\\
+	& \implies $rank\brak{A-2I}=4-1=3$\\
+	& $\implies \brak{A-2I}$ is not a full rank matrix\\
+	& Therefore $\mydet{A-2I}=0$\\
+	& $\implies$ 2 is an eigenvalue of $A$ with multiplicity 2.
+	\\&&
+	& Similarly, for $\lambda=4$\\
+	& Given that $dim\brak{N\brak{A-4I}}=2$\\
+	& \implies $rank\brak{A-4I}=4-2=2$\\
+	& $\implies \brak{A-4I}$ is not a full rank matrix\\
+	& Therefore $\mydet{A-4I}=0$\\
+	& $\implies$ 4 is an eigenvalue of $A$ with multiplicity 1.
+	\\&&
+	\hline \newpage \hline &&
+	& For $\lambda=0$\\
+	& Given that $rank\brak{A}=3$\\
+	& $\implies A$ is not a full rank matrix\\
+	& Therefore $\mydet{A}=0$\\
+	& $\implies$ 0 is an eigenvalue of $A$ with multiplicity 1.&&
+	\hline
+	\multirow{3}{*}{Determinant} & \\
+	& Given that $rank\brak{A}=3$\\
+	& $\implies A$ is not a full rank matrix\\
+	& Therefore $\mydet{A}=0$&&
+	\hline
+    \multirow{3}{*}{Diagonalizability} & \\
+    & An $n\times n$ matrix $A$ is diagonalizable if and only if $A$ has n linearly independent && eigen vectors.\\
+	& $rank\brak{A}+nullity\brak{A}=n$\\
+	& $\implies$ for $\lambda=0$,\\
+	& $nullity\brak{A-\lambda I}=nullity\brak{A}=4-3=1$\\
+	& $\implies$ There exists only one linearly independent eigen vector corresponding to && $0$ eigen value\\
+	& Thus, matrix A is not diagonalizable. &&
+    \hline
+    \multirow{3}{*}{Trace} & \\
+	& Trace\brak{A}=sum of eigen values\\
+	& $\implies$ Trace\brak{A}=0+2+2+4=8\\
+	&&
+	\hline
+	\multirow{3}{*}{Conclusion} & \\
+	& Option (1), (2) and (4) are correct\\
+	&&
+	\hline
+\end{longtable}
+\end{document}
