@@ -151,61 +151,61 @@ Which of the following are true?\\
 \item trace(A)=8
 \end{enumerate}
 \section{\textbf{Solution}}
-\begin{longtable}{|l|l|}
+\begin{longtable}{|c|l|}
     \hline
-	\multirow{3}{*}{Given} 
+	\multirow{5}{*}{Given} 
 	& \\
 	& $A$ is a $4\times 4$ matrix.
 	\\
-	& $dim\brak{N\brak{A-4I}}=2,\\
+	& $dim\brak{N\brak{A-4I}}=2$,\\
 	& $dim\brak{N\brak{A-2I}}=1$, and\\
-	& $rank\brak{A}=3$&&
+	& $rank\brak{A}=3$\cr
 	\hline
-	\multirow{3}{*}{Eigenvalues of a matrix} 
+	\multirow{20}{*}{Eigenvalues of a matrix} 
 	& \\
-	& The number $\lambda$ is an eigenvalue of a matrix A if and only if $A-\lambda I$ is singular,\\& i.e. $\mydet{A-\lambda I}=0$\\&&
+	& The number $\lambda$ is an eigenvalue of a matrix A if and only if $A-\lambda I$ is singular,\\& i.e. $\mydet{A-\lambda I}=0$ &&\\
 	& For $\lambda=2$\\
 	& Given that $dim\brak{N\brak{A-2I}}=1$\\
-	& \implies $rank\brak{A-2I}=4-1=3$\\
+	& $\implies$ 
+	$rank\brak{A-2I}=4-1=3$\\
 	& $\implies \brak{A-2I}$ is not a full rank matrix\\
 	& Therefore $\mydet{A-2I}=0$\\
 	& $\implies$ 2 is an eigenvalue of $A$ with multiplicity 2.
-	\\&&
+	&&\\
 	& Similarly, for $\lambda=4$\\
 	& Given that $dim\brak{N\brak{A-4I}}=2$\\
-	& \implies $rank\brak{A-4I}=4-2=2$\\
+	& $\implies rank\brak{A-4I}=4-2=2$\\
 	& $\implies \brak{A-4I}$ is not a full rank matrix\\
 	& Therefore $\mydet{A-4I}=0$\\
 	& $\implies$ 4 is an eigenvalue of $A$ with multiplicity 1.
-	\\&&
+	\\
 	\hline \newpage \hline &&
 	& For $\lambda=0$\\
 	& Given that $rank\brak{A}=3$\\
 	& $\implies A$ is not a full rank matrix\\
 	& Therefore $\mydet{A}=0$\\
-	& $\implies$ 0 is an eigenvalue of $A$ with multiplicity 1.&&
+	& $\implies$ 0 is an eigenvalue of $A$ with multiplicity 1.\\
 	\hline
 	\multirow{3}{*}{Determinant} & \\
 	& Given that $rank\brak{A}=3$\\
 	& $\implies A$ is not a full rank matrix\\
-	& Therefore $\mydet{A}=0$&&
+	& Therefore $\mydet{A}=0$
+	\\
 	\hline
     \multirow{3}{*}{Diagonalizability} & \\
-    & An $n\times n$ matrix $A$ is diagonalizable if and only if $A$ has n linearly independent && eigen vectors.\\
+    & An $n\times n$ matrix $A$ is diagonalizable if and only if $A$ has n linearly independent \\& eigen vectors.\\
 	& $rank\brak{A}+nullity\brak{A}=n$\\
 	& $\implies$ for $\lambda=0$,\\
 	& $nullity\brak{A-\lambda I}=nullity\brak{A}=4-3=1$\\
-	& $\implies$ There exists only one linearly independent eigen vector corresponding to && $0$ eigen value\\
-	& Thus, matrix A is not diagonalizable. &&
+	& $\implies$ There exists only one linearly independent eigen vector corresponding to \\& $0$ eigen value\\
+	& Thus, matrix A is not diagonalizable.\\
     \hline
     \multirow{3}{*}{Trace} & \\
-	& Trace\brak{A}=sum of eigen values\\
-	& $\implies$ Trace\brak{A}=0+2+2+4=8\\
-	&&
+	& $Trace\brak{A}$=sum of eigen values\\
+	& $\implies Trace\brak{A}=0+2+2+4=8$\\
 	\hline
 	\multirow{3}{*}{Conclusion} & \\
 	& Option (1), (2) and (4) are correct\\
-	&&
 	\hline
 \end{longtable}
 \end{document}
