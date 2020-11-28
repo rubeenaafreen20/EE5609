@@ -155,7 +155,8 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	\multirow{3}{*}{Characteristic Polynomial} 
 	& \\
 	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
-	& $p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
+	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
 	&\\
 	\hline
 	\multirow{3}{*}{Minimal Polynomial} 
@@ -168,13 +169,14 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
     \hline
     \multirow{3}{*}{Algebraic Multiplicity $\brak{A_M}$}
     &\\
-    & No. Of times an Eigen value appears in a characteristic equation.\\
+    & No. of times an eigen value appears in a characteristic equation.\\
     &\\
     \hline
 \end{tabular}
 \label{table:1}
     \caption{Definitions}
 \end{table}
+\newpage
 \section{\textbf{Solution}}
 \renewcommand{\thetable}{2}
 \begin{longtable}{|c|l|}
@@ -202,6 +204,7 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	&$m\brak{x}=x\brak{x-1}$\\
 	&\\
 	& $\implies m\brak{\vec{A}}=\vec{A}\brak{\Vec{A}-\vec{I}}$\\
+	&\\
 	& $\qquad\qquad=\myvec{1&1&0&0\\-1&-1&0&0\\-2&-2&2&1\\1&1&-1&0}\myvec{0&1&0&0\\-1&-2&0&0\\-2&-2&1&1\\1&1&-1&-1}$\\
 	& $\qquad \qquad = \myvec{-1&-1&0&0\\1&1&0&0\\-1&-1&1&1\\1&1&-2&-2}\neq\Vec{0}$\\
 	&\\
@@ -212,26 +215,34 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	&$m\brak{x}=x^2\brak{x-1}$\\
 	&\\
 	& $\implies m\brak{\vec{A}}=\vec{A}^2\brak{\Vec{A}-\vec{I}}$\\
+	&\\
 	& $\qquad \qquad=\myvec{0&0&0&0\\0&0&0&0\\-3&-3&3&2\\2&2&-2&-1}\myvec{0&1&0&0\\-1&-2&0&0\\-2&-2&1&1\\1&1&-1&-1}$\\
 	& $\qquad \qquad = \myvec{0&0&0&0\\0&0&0&0\\-1&-1&1&1\\1&1&-1&-1}\neq\Vec{0}$\\
+	&\\
 	&$\implies x^2\brak{x-1}$ is not a minimal polynomial\\
+	&\\
 	\hline
 	\multirow{3}{*}{$a=1,b=2$} & \\
 	&$m\brak{x}=x\brak{x-1}^2$\\
 	&\\
 	& $\implies m\brak{\vec{A}}=\vec{A}\brak{\Vec{A}-\vec{I}}^2$\\
+	&\\
 	& $\qquad\qquad=\myvec{1&1&0&0\\-1&-1&0&0\\-2&-2&2&1\\1&1&-1&0}\myvec{1&-2&0&0\\2&3&0&0\\1&1&0&0\\0&0&0&0}$\\
 	& $\qquad\qquad = \myvec{1&1&0&0\\-1&-1&0&0\\0&0&0&0\\0&0&0&0}\neq\Vec{0}$\\
+	&\\
 	&$\implies x^2\brak{x-1}$ is not a minimal polynomial\\
-	\hline \hline
+	&\\
+	\hline
 	\multirow{3}{*}{$a=2,b=2$} & \\
 	&$m\brak{x}=x^2\brak{x-1}^2$\\
 	&\\
 	&$\implies m\brak{\vec{A}}=\vec{A}^2\brak{\Vec{A}-\vec{I}}^2$\\
+	&\\
 	& $\qquad\qquad=\myvec{0&0&0&0\\0&0&0&0\\-3&-3&3&2\\2&2&-2&-1}\myvec{1&-2&0&0\\2&3&0&0\\1&1&0&0\\0&0&0&0}$\\
 	& $\qquad\qquad = \myvec{0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0}=\Vec{0}$\\
 	&\\
 	&$\implies x^2\brak{x-1}^2$ is a minimal polynomial\\
+	&\\
 	\hline
 	\multirow{3}{*}{Conclusion} & \\
 	& For the given matrix $\Vec{A}$,\\
