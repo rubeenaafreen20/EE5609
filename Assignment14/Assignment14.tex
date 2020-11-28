@@ -159,6 +159,13 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
 	&\\
 	\hline
+	\multirow{3}{*}{Cayley-Hamilton Theorem}
+    &\\
+    & If $p\brak{x}$ is the characteristic polynomial of an $n\times n$ matrix $\vec{A}$, then,\\
+    &\\
+    &$\qquad \qquad \qquad p\brak{\vec{A}}=\vec{0}$\\
+    &\\
+    \hline
 	\multirow{3}{*}{Minimal Polynomial} 
 	&\\
 	& Minimal polynomial $m\brak{x}$ is he smallest factor of characteristic polynomial\\
@@ -237,9 +244,8 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	&$m\brak{x}=x^2\brak{x-1}^2$\\
 	&\\
 	&$\implies m\brak{\vec{A}}=\vec{A}^2\brak{\Vec{A}-\vec{I}}^2$\\
-	&\\
-	& $\qquad\qquad=\myvec{0&0&0&0\\0&0&0&0\\-3&-3&3&2\\2&2&-2&-1}\myvec{1&-2&0&0\\2&3&0&0\\1&1&0&0\\0&0&0&0}$\\
-	& $\qquad\qquad = \myvec{0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0}=\Vec{0}$\\
+	& $\qquad \qquad \quad=p\brak{\Vec{A}}$\\
+	&$\qquad\qquad\quad=\vec{0}$ (Cayley-Hamilton Theorem)\\
 	&\\
 	&$\implies x^2\brak{x-1}^2$ is a minimal polynomial\\
 	&\\
@@ -249,7 +255,7 @@ Show that the characteristic polynomial for $\Vec{A}$ is $x^2\brak{x-1}^2$ and t
 	&$x^2\brak{x-1}^2$ is the characteristic polynomial as well as minimal polynomial.\\
 	&\\
 	\hline
-	\caption{Proving that the given characteristic polynomial is also minimal polynomial}
+	\caption{Checking for minimal polynomial}
     \label{table:2}
 \end{longtable}
 \end{document}
