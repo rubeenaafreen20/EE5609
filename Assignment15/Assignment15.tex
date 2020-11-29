@@ -1,0 +1,234 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 15}
+\author{Rubeena Aafreen}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment15
+\end{lstlisting}
+\section{\textbf{Problem}}
+%
+Let
+\begin{align}
+    \Vec{A}=\myvec{0&1&0\\2&-2&2\\2&-3&2}
+\end{align}
+Is $\vec{A}$ similar over the field of real numbers to a triangular matrix? If so, find such a triangular matrix.
+\section{\textbf{Definitions}}
+\renewcommand{\thetable}{1}
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+	\multirow{3}{*}{Characteristic Polynomial} 
+	& \\
+	& For an $n\times n$ matrix $\vec{A}$, characteristic polynomial is defined by,\\
+	&\\
+	& $\qquad\qquad\qquad p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Theory}
+    &\\
+    & $\vec{A}$ is similar to triangular matrix $\vec{J}$ if\\
+    & $\exists$ an invertible matrix $\vec{P}$ such that\\
+    &\\
+    & $\qquad \qquad \qquad \vec{A}=\Vec{P}\vec{J}\vec{P}^{-1}$\\
+    &\\
+    \hline
+\end{tabular}
+\label{table:1}
+    \caption{Definitions}
+\end{table}
+\newpage
+\section{\textbf{Solution}}
+\renewcommand{\thetable}{2}
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{Characteristic polynomial} 
+	& \\
+	& $p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	& $\qquad = \mydet{x&-1&0\\-2&x+2&-2\\-2&3&x-2}$\\
+	& $\qquad=x\brak{\brak{x+2}\brak{x-2}+6}+\brak{-2\brak{x-2}+4}+0$\\
+	&$\qquad=x\brak{x^2+2}-2x$\\
+	&$\qquad=x^3$\\
+	&\\
+	&$\implies \lambda=0$\\
+	&\\
+	\hline
+	\multirow{3}{*}{$dim\brak{Ker\brak{\vec{A}-\lambda\Vec{I}}}$} & \\
+	&$\qquad\brak{\vec{A}-0\vec{I}}\vec{X}=\vec{0}$\\
+	&\\
+	& $\qquad\implies \myvec{0&1&0\\2&-2&2\\2&-3&2}\myvec{x\\y\\z}=\myvec{0\\0\\0}$\\
+	&\\
+	& $\qquad\implies x=-z, y=0$\\
+	&\\
+	& So,\\
+	&$\qquad\vec{v_1}=\myvec{-1\\0\\1}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Find $\vec{v_2}$ such that $\vec{A}\vec{v_2}=\vec{v_1}$}&\\ &$\qquad\myvec{0&1&0\\2&-2&2\\2&-3&2}\vec{v_2}=\myvec{1\\0\\-1}$\\
+	&\\
+	& $\qquad\implies \vec{v_2}=\myvec{-1\\-1\\0}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Find $\vec{v_3}$ such that $\qquad\vec{A}\vec{v_3}=\vec{v_2}$}&\\ &$\qquad\myvec{0&1&0\\2&-2&2\\2&-3&2}\vec{v_3}=\myvec{-1\\-1\\0}$\\
+	&\\
+	& $\qquad\implies \vec{v_3}=\myvec{-\frac{3}{2}\\-1\\0}$\\
+	&\\
+	\hline
+	&\\
+	& Let $\Vec{P}=\myvec{\vec{v_1}&\vec{v_2}&\vec{v_3}}$\\
+	&\\
+	& Then,\\
+	& $\qquad\vec{A}\vec{P}=\myvec{\Vec{A}\vec{v_1}&\Vec{A}\vec{v_2}&\Vec{A}\vec{v_3}}$\\
+	& $\implies \vec{A}\vec{P}=\myvec{0&\vec{v_1}&\vec{v_2}}$\\
+	&$\qquad\qquad = \myvec{\vec{v_1}&\vec{v_2}&\vec{v_3}}\myvec{0&1&0\\0&0&1\\0&0&0}$\\
+	&$\qquad\qquad=\vec{P}\vec{J}$\\
+	&\\
+	&$\implies \vec{A}\vec{P}=\vec{P}\vec{J}$\\
+	&\\
+	&$\implies \vec{A}=\vec{P}\vec{J}\vec{P}^{-1}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Conclusion} & \\
+	& Therefore, $\vec{A}$ is similar to triangular matrix and the triangular matrix is,\\
+	&\\
+	&$\vec{J}=\myvec{0&1&0\\0&0&1\\0&0&0}$\\
+	&\\
+	\hline
+	\caption{Checking triangularizability of $\vec{A}$}
+    \label{table:2}
+\end{longtable}
+\end{document}
