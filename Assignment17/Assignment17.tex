@@ -1,0 +1,252 @@
+\documentclass[journal,12pt]{IEEEtran}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 17}
+\author{Rubeena Aafreen}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download the latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/rubeenaafreen20/EE5609/tree/master/Assignment17
+\end{lstlisting}
+\section{\textbf{Problem}}
+%
+Let $\vec{T}$ be the diagonalizable linear operator on $\mathbb{R}^3$ which we discussed in example 3 of section $6.2$. Use the Lagrange polynomials to write the representing matrix $\vec{A}$ in the form
+\begin{align}
+    \vec{A}=\vec{E_1}+2\vec{E_2},\quad \vec{E_1}+\vec{E_2}=\vec{I}, \vec{E_1}\vec{E_2}=\vec{0}
+\end{align}
+\section{\textbf{Outline}}
+\renewcommand{\thetable}{1}
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|c|l|}
+    \hline
+    \multirow{3}{*}{Diagonalizable Operator} 
+	& \\
+	& For a linear operator $\vec{T}\colon \vec{V}\longrightarrow \vec{V}$, $\vec{T}$ is a diagonalizable operator if \\
+	& $\exists$ some basis for $\Vec{V}$ such that the matrix representing $\vec{T}$ is a diagonal matrix\\
+	&i.e.\\
+	& $\qquad\qquad\qquad \vec{T}\brak{\vec{X}}=\Vec{A}\Vec{X}$,\\
+    &$\implies \vec{A}$ is a diagonalizable matrix\\
+	&\\
+	\hline
+	\multirow{3}{*}{Lagrange Polynomials} 
+	& \\
+	& For a set of scalars $c_0, c_1,\dots, c_n \in \mathbb{F}$, Lagrange Polynomial is defined as:\\
+	&\\
+	&$\qquad\qquad\qquad p_j=\displaystyle\prod_{i\neq j}\frac{\brak{x-c_i}}{\brak{c_j-c_i}}$\\
+	&\\
+	\hline
+\end{tabular}
+\label{table:1}
+    \caption{Definitions}
+\end{table}
+\newpage
+\section{\textbf{Solution}}
+\renewcommand{\thetable}{2}
+\begin{longtable}{|c|l|}
+    \hline
+    \multirow{3}{*}{Given} 
+	& \\
+	& $\qquad\qquad\qquad\vec{A}=\myvec{5&-6&-6\\-1&4&2\\3&-6&-4}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Characteristic polynomial} 
+	& \\
+	& $p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	& $\qquad = \mydet{x&-1&0\\-2&x+2&-2\\-2&3&x-2}$\\
+	& $\qquad=x^3-5x^2+8x-4$\\
+	&$\qquad=\brak{x-1}\brak{x-2}^2$\\
+	&\\
+	&$\implies \lambda=1, 2$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Minimal Polynomial} & \\
+	& $p\brak{x}=\brak{x-1}\brak{x-2}^b,\quad b\leq2$\\
+	&\\
+	&$\brak{\vec{A}-\vec{I}}\brak{\vec{A}-2\vec{I}}=\myvec{4&-6&-6\\-1&3&2\\3&-6&-5}\myvec{3&-6&-6\\-1&2&2\\3&-6&-6}=\vec{0}$\\
+	&\\
+	&Therefore, $\brak{x-1}\brak{x-2}$ is the minimal polynomial.\\
+	&\\
+	\hline
+	\multirow{3}{*}{Lagrange Polynomial} 
+	& \\
+	& $\qquad\qquad p_j=\displaystyle\prod_{i\neq j} \frac{\brak{x-c_i}}{\brak{c_j-c_i}}$\\
+	&\\
+	& For characteristic values $c_1=1,\quad c_2=2$,\\
+	&\\
+	& $\implies p_1=\frac{(x-1)}{2-1}, \qquad p_2=\frac{(x-2)}{1-2}$\\
+	&\\
+	& $\implies p_1= \brak{x-1}$, and\\
+	&$\qquad p_2=\brak{2-x}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{Projection Maps} & \\
+	& We know that,\\
+	&$\qquad \qquad \qquad \vec{E_j}=p_j\brak{\vec{T
+	}}$\\ 
+	&\\
+	&$\implies \vec{E_1}=\vec{A}-\vec{I}$ and $\vec{E_2}=2\vec{I}-\vec{A}$ \\
+	&\\
+	&$\implies \vec{E_1}=\myvec{4&-6&-6\\-1&3&2\\3&-6&-5}$, and \\
+	&$\qquad \vec{E_2}=\myvec{-3&6&6\\1&-2&-2\\-3&6&6}$\\
+	&\\
+	\hline
+\multirow{3}{*}{Verification} & \\
+	& We have, \\
+	&$\qquad\qquad\vec{E_1}=\vec{A}-\vec{I}$\\
+	&$\qquad\implies \vec{A}-\vec{E_1}=\vec{I}\qquad\qquad\qquad\dots\brak{1}$\\
+	&\\
+	&$\qquad\qquad\vec{E_2}=2\vec{I}-\vec{A}$\\
+	&From $\brak{1},$\\
+	&$\qquad\implies\vec{E_2}=2\brak{\vec{A}-\vec{E_1}}-\vec{A}$\\
+	&$\qquad\implies \boxed{\vec{A}=2\vec{E_1}+\vec{E_2}}$\\
+	&\\
+	& Also,\\
+	&$\qquad \vec{E_1}=\myvec{4&-6&-6\\-1&3&2\\3&-6&-5},\qquad \vec{E_2}=\myvec{-3&6&6\\1&-2&-2\\-3&6&6}$\\
+	&\\
+	&$\implies \vec{E_1}+\vec{E_2}=\myvec{4&-6&-6\\-1&3&2\\3&-6&-5}+\myvec{-3&6&6\\1&-2&-2\\-3&6&6}$\\
+	&$\qquad\qquad\qquad = \myvec{1&0&0\\0&1&0\\0&0&1}$\\
+	&\\
+	&$\qquad\implies\boxed{\vec{E_1}+\vec{E_2}=\vec{I}}$\\
+	&\\
+	&$\vec{E_1}\vec{E_2}=\myvec{4&-6&-6\\-1&3&2\\3&-6&-5}\myvec{-3&6&6\\1&-2&-2\\-3&6&6}$\\
+	&$\qquad\quad=\myvec{0&0&0\\0&0&0\\0&0&0}$\\
+	&\\
+	&$\qquad\implies\boxed{\vec{E_1}\vec{E_2}=\vec{0}}$\\
+	&\\
+	\hline
+	\caption{Using Lagrange Polynomials to represent $\vec{A}$}
+    \label{table:2}
+\end{longtable}
+\end{document}
