@@ -147,9 +147,7 @@ Let $\vec{T}$ be the diagonalizable linear operator on $\mathbb{R}^3$ which we d
 \end{align}
 \section{\textbf{Outline}}
 \renewcommand{\thetable}{1}
-\begin{table}[ht!]
-\centering
-\begin{tabular}{|c|l|}
+\begin{longtable}{|c|l|}
     \hline
     \multirow{3}{*}{Diagonalizable Operator} 
 	& \\
@@ -185,11 +183,42 @@ Let $\vec{T}$ be the diagonalizable linear operator on $\mathbb{R}^3$ which we d
 	&$\qquad\qquad\qquad p_j=\displaystyle\prod_{i\neq j}\frac{\brak{x-c_i}}{\brak{c_j-c_i}}$\\
 	&\\
 	\hline
-\end{tabular}
-\label{table:1}
-    \caption{Definitions}
-\end{table}
-\newpage
+	\multirow{3}{*}{Theorem} 
+	& \\
+	& If $\vec{T}$ is a diagonalizable linear operator on a finite dimensional space $\vec{V}$,\\
+	&and if $c_1,c_2,\dots,c_k$ are distinct characterictic values of $\vec{T}$, then there exist\\
+	&linear operators $\vec{E_1},\vec{E_2},\dots,\vec{E_k}$ such that:\\
+	&\\
+	& $\quad\brak{1}\quad\vec{T}=c_1\vec{E_1}+\dots+c_k\vec{E_k}$\\
+	&$\quad\brak{2}\quad\vec{E_1}+\dots+\vec{E_k}=\vec{I}$\\
+	&$\quad\brak{3}\quad\vec{E_i}\vec{E_j}=\vec{0},\quad i\neq j$\\
+	&$\quad\brak{4}\quad\vec{E_i}=\vec{E_i}^2,\quad\brak{\vec{E_i}\text{ is a projection}}$\\
+	&$\quad\brak{5}\quad\alpha=\vec{E_i}\alpha,\forall\alpha\in\vec{V}$\\
+	&\\
+	\hline
+	\multirow{3}{*}{\shortstack{Relation between Lagrange\\ Polynomials and Projection}} 
+	& \\
+	& We have:\\
+	&$\qquad\qquad \vec{T}=c_1\vec{E_1}+\dots+c_k\vec{E_k}$\\
+	&\\
+	&If $g$ is any polynomial over field $\mathbb{F}$,\\ 
+	&$\qquad\qquad g\brak{\vec{T}}=g\brak{c_1}\vec{E_1}+\dots+g\brak{c_k}\vec{E_k}\qquad\qquad\qquad\dots\brak{1}$\\
+	&\\
+	&Now,\\
+	&$\qquad\qquad p_j=\displaystyle\prod_{i\neq j}\frac{\brak{x-c_i}}{\brak{c_j-c_i}}$\\
+	&$\qquad\implies p_j\brak{c_i}=\delta_{ij}$ (Kronecker Delta)$\qquad\qquad\qquad\quad\dots\brak{2}$\\
+	&\\
+	&From $\brak{1}$ and $\brak{2}$,\\
+	&$\qquad\implies p_j\brak{\vec{T}}=\sum_{i=1}^k\delta_{ij}\vec{E}_i=\vec{E_j}$\\
+	&\\
+	&$\qquad\qquad\implies\boxed{p_j\brak{\vec{T}}=\vec{E_j}}$\\
+	&\\
+	&$\implies$ Projections $\vec{E_j}$ are polynomials in $\vec{T}$\\
+	&\\
+	\hline
+    \caption{Definitions and results used}
+    \label{table:1}
+\end{longtable}
 \section{\textbf{Solution}}
 \renewcommand{\thetable}{2}
 \begin{longtable}{|c|l|}
@@ -203,6 +232,7 @@ Let $\vec{T}$ be the diagonalizable linear operator on $\mathbb{R}^3$ which we d
 	\multirow{3}{*}{Characteristic polynomial} 
 	& \\
 	& $p\brak{x}=\mydet{x\Vec{I}-\Vec{A}}$\\
+	&\\
 	& $\qquad = \mydet{x&-1&0\\-2&x+2&-2\\-2&3&x-2}$\\
 	& $\qquad=x^3-5x^2+8x-4$\\
 	&$\qquad=\brak{x-1}\brak{x-2}^2$\\
